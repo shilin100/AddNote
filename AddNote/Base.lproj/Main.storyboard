@@ -24,11 +24,21 @@
                                     <constraint firstAttribute="height" constant="170" id="gas-VV-zum"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cao-Y9-hqH">
+                                <rect key="frame" x="127" y="110" width="120" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="dgd-6J-xIJ"/>
+                                    <constraint firstAttribute="height" constant="120" id="kkz-Ph-YaZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XFv-WX-lpd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0iK-y4-YJ3"/>
                             <constraint firstItem="XFv-WX-lpd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Cd-jp-9fe"/>
+                            <constraint firstItem="cao-Y9-hqH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9gz-oj-zTj"/>
+                            <constraint firstItem="cao-Y9-hqH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="U1I-ct-XsN"/>
                             <constraint firstItem="XFv-WX-lpd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UGy-u2-xzE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
