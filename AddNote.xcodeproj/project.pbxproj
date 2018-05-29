@@ -22,6 +22,8 @@
 		9D7FCDA620BC04F300F45F79 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDA520BC04F300F45F79 /* MineViewController.swift */; };
 		9D7FCDA820BC050A00F45F79 /* BooksViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDA720BC050A00F45F79 /* BooksViewReactor.swift */; };
 		9D7FCDAA20BC051700F45F79 /* MineViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDA920BC051700F45F79 /* MineViewReactor.swift */; };
+		9D7FCDB020BD54BD00F45F79 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDAF20BD54BD00F45F79 /* NoteTableViewCell.swift */; };
+		9D7FCDB220BD6C5600F45F79 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDB120BD6C5600F45F79 /* UIKitExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		9D7FCDA520BC04F300F45F79 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		9D7FCDA720BC050A00F45F79 /* BooksViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewReactor.swift; sourceTree = "<group>"; };
 		9D7FCDA920BC051700F45F79 /* MineViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewReactor.swift; sourceTree = "<group>"; };
+		9D7FCDAF20BD54BD00F45F79 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		9D7FCDB120BD6C5600F45F79 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		AC7A873B6240CE9E6D1DB46A /* Pods-AddNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddNoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AddNoteTests/Pods-AddNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		F29E6296F4A8EBBB1F2E1196 /* Pods-AddNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-AddNote/Pods-AddNote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,8 +178,18 @@
 				9D7FCDA720BC050A00F45F79 /* BooksViewReactor.swift */,
 				9D7FCDA520BC04F300F45F79 /* MineViewController.swift */,
 				9D7FCDA920BC051700F45F79 /* MineViewReactor.swift */,
+				9D7FCDAE20BD54A400F45F79 /* View */,
 			);
 			path = Sections;
+			sourceTree = "<group>";
+		};
+		9D7FCDAE20BD54A400F45F79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D7FCDAF20BD54BD00F45F79 /* NoteTableViewCell.swift */,
+				9D7FCDB120BD6C5600F45F79 /* UIKitExtensions.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E1BFCDA34B5411790F09112A /* Frameworks */ = {
@@ -464,7 +478,9 @@
 			files = (
 				9D7FCDA420BC04E800F45F79 /* BooksViewController.swift in Sources */,
 				9D1B882E20B7FA0400115E9F /* AppDelegate.swift in Sources */,
+				9D7FCDB220BD6C5600F45F79 /* UIKitExtensions.swift in Sources */,
 				9D7FCDA020BBEEFC00F45F79 /* NotesViewReactor.swift in Sources */,
+				9D7FCDB020BD54BD00F45F79 /* NoteTableViewCell.swift in Sources */,
 				9D7FCDAA20BC051700F45F79 /* MineViewReactor.swift in Sources */,
 				9D7FCD9B20BBE9CB00F45F79 /* NotesViewController.swift in Sources */,
 				9D7FCDA820BC050A00F45F79 /* BooksViewReactor.swift in Sources */,
