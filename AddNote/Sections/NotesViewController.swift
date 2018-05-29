@@ -11,17 +11,25 @@ import ReactorKit
 import RxCocoa
 import RxSwift
 
-class NotesViewController: BaseViewController,StoryboardView {
+class NotesViewController: UIViewController,StoryboardView {
+    @IBOutlet weak var earningLabel: UILabel!
+    @IBOutlet weak var expenseLabel: UILabel!
+    @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var tableview: UITableView!
     
-    
-    func bind(reactor: NotesViewReactor) {
+    var disposeBag = DisposeBag()
+    typealias Reactor = NotesViewReactor
+
+    func bind(reactor: Reactor) {
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+//        addBtn.layer.cornerRadius = 60;
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

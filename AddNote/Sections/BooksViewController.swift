@@ -11,9 +11,11 @@ import ReactorKit
 import RxCocoa
 import RxSwift
 
-class BooksViewController: BaseViewController,StoryboardView {
+class BooksViewController: UIViewController,StoryboardView {
+    var disposeBag = DisposeBag()
+    typealias Reactor = BooksViewReactor
 
-    func bind(reactor: BooksViewReactor) {
+    func bind(reactor: Reactor) {
         
     }
     

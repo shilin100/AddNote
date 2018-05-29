@@ -11,9 +11,11 @@ import ReactorKit
 import RxCocoa
 import RxSwift
 
-class MineViewController: BaseViewController,StoryboardView{
+class MineViewController: UIViewController,StoryboardView{
+    var disposeBag = DisposeBag()
+    typealias Reactor = MineViewReactor
 
-    func bind(reactor: MineViewReactor) {
+    func bind(reactor: Reactor) {
         
     }
     

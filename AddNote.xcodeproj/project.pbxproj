@@ -18,7 +18,6 @@
 		9D1B884E20B7FA0600115E9F /* AddNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B884D20B7FA0600115E9F /* AddNoteUITests.swift */; };
 		9D7FCD9B20BBE9CB00F45F79 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCD9A20BBE9CB00F45F79 /* NotesViewController.swift */; };
 		9D7FCDA020BBEEFC00F45F79 /* NotesViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCD9F20BBEEFC00F45F79 /* NotesViewReactor.swift */; };
-		9D7FCDA220BBEF8400F45F79 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDA120BBEF8400F45F79 /* BaseViewController.swift */; };
 		9D7FCDA420BC04E800F45F79 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDA320BC04E800F45F79 /* BooksViewController.swift */; };
 		9D7FCDA620BC04F300F45F79 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDA520BC04F300F45F79 /* MineViewController.swift */; };
 		9D7FCDA820BC050A00F45F79 /* BooksViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDA720BC050A00F45F79 /* BooksViewReactor.swift */; };
@@ -64,7 +63,6 @@
 		9D1B884F20B7FA0600115E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D7FCD9A20BBE9CB00F45F79 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		9D7FCD9F20BBEEFC00F45F79 /* NotesViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewReactor.swift; sourceTree = "<group>"; };
-		9D7FCDA120BBEF8400F45F79 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9D7FCDA320BC04E800F45F79 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		9D7FCDA520BC04F300F45F79 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		9D7FCDA720BC050A00F45F79 /* BooksViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewReactor.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 		9D7FCD9920BBE9A800F45F79 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				9D7FCDA120BBEF8400F45F79 /* BaseViewController.swift */,
 				9D7FCD9A20BBE9CB00F45F79 /* NotesViewController.swift */,
 				9D7FCD9F20BBEEFC00F45F79 /* NotesViewReactor.swift */,
 				9D7FCDA320BC04E800F45F79 /* BooksViewController.swift */,
@@ -467,7 +464,6 @@
 			files = (
 				9D7FCDA420BC04E800F45F79 /* BooksViewController.swift in Sources */,
 				9D1B882E20B7FA0400115E9F /* AppDelegate.swift in Sources */,
-				9D7FCDA220BBEF8400F45F79 /* BaseViewController.swift in Sources */,
 				9D7FCDA020BBEEFC00F45F79 /* NotesViewReactor.swift in Sources */,
 				9D7FCDAA20BC051700F45F79 /* MineViewReactor.swift in Sources */,
 				9D7FCD9B20BBE9CB00F45F79 /* NotesViewController.swift in Sources */,
