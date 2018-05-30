@@ -30,22 +30,11 @@ class NotesViewController: UIViewController,StoryboardView {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        tableview.register(NoteTableViewCell.self, forCellReuseIdentifier: "Cell")
-        tableview.separatorStyle = .none
 
-        let sections: [MultipleSectionModel] = [
-            .ImageProvidableSection(title: "Section 1",
-                                    items: [.ImageSectionItem(image: UIImage(named: "settings")!, title: "General")]),
-            .StepperableSection(title: "Section 3",
-                                items: [.StepperSectionItem(title: "1")])
-        ]
         
-        let dataSource = NotesViewController.dataSource()
-        
-        Observable.just(sections)
-            .bind(to: tableview.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
+        tableview.separatorStyle = .none
+        tableview.delegate = self
+        tableview.dataSource = self
 
     }
 
@@ -77,73 +66,22 @@ class NotesViewController: UIViewController,StoryboardView {
     
 }
 
-extension NotesViewController {
-    static func dataSource() -> RxTableViewSectionedReloadDataSource<MultipleSectionModel> {
-        return RxTableViewSectionedReloadDataSource<MultipleSectionModel>(
-            configureCell: { (dataSource, table, idxPath, _) in
-                switch dataSource[idxPath] {
-                case let .ImageSectionItem(image, title):
-                    let cell: NoteTableViewCell = table.dequeueReusableCell(forIndexPath: idxPath)
-//                    cell.titleLabel.text = title
-//                    cell.cellImageView.image = image
-                    
-                    return cell
-                case let .StepperSectionItem(title):
-                    let cell: NoteTableViewCell = table.dequeueReusableCell(forIndexPath: idxPath)
-//                    cell.titleLabel.text = title
-                    
-                    return cell
-                }
-        },
-            titleForHeaderInSection: { dataSource, index in
-                let section = dataSource[index]
-                return section.title
-        }
-        )
-    }
-}
-
-
-enum MultipleSectionModel {
-    case ImageProvidableSection(title: String, items: [SectionItem])
-    case StepperableSection(title: String, items: [SectionItem])
-}
-
-enum SectionItem {
-    case ImageSectionItem(image: UIImage, title: String)
-    case StepperSectionItem(title: String)
-}
-
-extension MultipleSectionModel: SectionModelType {
-    typealias Item = SectionItem
-    
-    var items: [SectionItem] {
-        switch  self {
-        case .ImageProvidableSection(title: _, items: let items):
-            return items.map {$0}
-        case .StepperableSection(title: _, items: let items):
-            return items.map {$0}
-        }
+extension NotesViewController:UITableViewDataSource,UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3;
     }
     
-    init(original: MultipleSectionModel, items: [Item]) {
-        switch original {
-        case let .ImageProvidableSection(title: title, items: _):
-            self = .ImageProvidableSection(title: title, items: items)
-        case let .StepperableSection(title, _):
-            self = .StepperableSection(title: title, items: items)
-        }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40;
     }
-}
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NoteTableViewCell
 
-extension MultipleSectionModel {
-    var title: String {
-        switch self {
-        case .ImageProvidableSection(title: let title, items: _):
-            return title
-        case .StepperableSection(title: let title, items: _):
-            return title
-        }
+        cell.left.text = "left"
+        cell.right.text = "right"
+
+        return cell;
     }
+    
 }
-

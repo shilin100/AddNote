@@ -10,6 +10,7 @@
 		1ED119FDA6E5600D7DF996B3 /* Pods_AddNoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6E64FAACF8E0CB85BCB9D9 /* Pods_AddNoteUITests.framework */; };
 		22BC4351F513D426942D83D2 /* Pods_AddNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C09D95901612D7E7A4F7265 /* Pods_AddNote.framework */; };
 		7B3A529ABDE7058E9E547E2C /* Pods_AddNoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C44AC4780E9C94FA7BAA60 /* Pods_AddNoteTests.framework */; };
+		9D164D3520BE848D006A3C91 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D164D3420BE848C006A3C91 /* AddViewController.swift */; };
 		9D1B882E20B7FA0400115E9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B882D20B7FA0400115E9F /* AppDelegate.swift */; };
 		9D1B883320B7FA0400115E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1B883120B7FA0400115E9F /* Main.storyboard */; };
 		9D1B883520B7FA0600115E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1B883420B7FA0600115E9F /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		73BB81427E795D3947E2D0D4 /* Pods-AddNoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddNoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AddNoteUITests/Pods-AddNoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		74C44AC4780E9C94FA7BAA60 /* Pods_AddNoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddNoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD3ADD0F079091BA18AD251 /* Pods-AddNoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddNoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AddNoteUITests/Pods-AddNoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D164D3420BE848C006A3C91 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		9D1B882A20B7FA0400115E9F /* AddNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1B882D20B7FA0400115E9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1B883220B7FA0400115E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				9D7FCDA720BC050A00F45F79 /* BooksViewReactor.swift */,
 				9D7FCDA520BC04F300F45F79 /* MineViewController.swift */,
 				9D7FCDA920BC051700F45F79 /* MineViewReactor.swift */,
+				9D164D3420BE848C006A3C91 /* AddViewController.swift */,
 				9D7FCDAE20BD54A400F45F79 /* View */,
 			);
 			path = Sections;
@@ -390,6 +393,8 @@
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/ReusableKit/ReusableKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -426,6 +431,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReusableKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -476,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D164D3520BE848D006A3C91 /* AddViewController.swift in Sources */,
 				9D7FCDA420BC04E800F45F79 /* BooksViewController.swift in Sources */,
 				9D1B882E20B7FA0400115E9F /* AppDelegate.swift in Sources */,
 				9D7FCDB220BD6C5600F45F79 /* UIKitExtensions.swift in Sources */,

@@ -48,6 +48,8 @@ pod 'LeanCloud'
 pod 'URLNavigator'
 pod 'SwiftyColor'
 pod 'SwiftyImage'
+pod 'RealmSwift'
+
 
   target 'AddNoteTests' do
     inherit! :search_paths
