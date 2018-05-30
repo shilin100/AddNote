@@ -10,8 +10,8 @@ import UIKit
 import ReactorKit
 import RxCocoa
 import RxSwift
-import RxDataSources
-import Differentiator
+import RealmSwift
+import Realm
 
 
 class NotesViewController: UIViewController,StoryboardView {
@@ -20,6 +20,11 @@ class NotesViewController: UIViewController,StoryboardView {
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var tableview: UITableView!
     
+    var dataArr : Array<Any>?
+    
+    
+    
+
     var disposeBag = DisposeBag()
     typealias Reactor = NotesViewReactor
 
@@ -30,19 +35,32 @@ class NotesViewController: UIViewController,StoryboardView {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-
-        
         tableview.separatorStyle = .none
         tableview.delegate = self
         tableview.dataSource = self
+        let note = NoteModel()
+        note.type = "Rex"
+        note.age = 1
+        note.money = "eee"
+        note.date = "33"
+        note.interval = 1.11
 
+        let realm = try! Realm()
+
+        let dogs = realm.objects(NoteModel.self)
+        if dogs.count > 0 {
+            
+            
+        }
     }
 
+
     
-
-
     func setupUI() {
+
+        
         self.navigationController?.navigationBar.titleTextAttributes = [kCTForegroundColorAttributeName:UIColor.white] as [NSAttributedStringKey : Any]
+
         // 2.设置导航栏前景色：设置item指示色
         self.navigationController?.navigationBar.tintColor = UIColor.purple
         // 3.设置导航栏半透明
@@ -68,7 +86,7 @@ class NotesViewController: UIViewController,StoryboardView {
 
 extension NotesViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3;
+        return dataArr?.count ?? 0;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -77,7 +95,7 @@ extension NotesViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NoteTableViewCell
-
+        
         cell.left.text = "left"
         cell.right.text = "right"
 
