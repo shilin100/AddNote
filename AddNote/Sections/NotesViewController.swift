@@ -20,10 +20,7 @@ class NotesViewController: UIViewController,StoryboardView {
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var tableview: UITableView!
     
-    var dataArr : Array<Any>?
-    
-    
-    
+    var dataArr : Results<NoteModel>?
 
     var disposeBag = DisposeBag()
     typealias Reactor = NotesViewReactor
@@ -38,22 +35,50 @@ class NotesViewController: UIViewController,StoryboardView {
         tableview.separatorStyle = .none
         tableview.delegate = self
         tableview.dataSource = self
-        let note = NoteModel()
-        note.type = "Rex"
-        note.age = 1
-        note.money = "eee"
-        note.date = "33"
-        note.interval = 1.11
-
         let realm = try! Realm()
+        
+        let book = realm.objects(Book.self)
+        if book.count == 0 {
+            let firstBook = Book()
+            firstBook.title = "日常账本"
+            firstBook.id = 1
+            try! realm.write {
+                realm.add(firstBook)
+            }
 
-        let dogs = realm.objects(NoteModel.self)
-        if dogs.count > 0 {
-            
-            
+//            realm.beginWrite()
+//            try! realm.commitWrite()
+            UserDefaults.standard.set(1, forKey: "selectedBook")
         }
+
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let realm = try! Realm()
+
+        let notes = realm.objects(NoteModel.self)
+        if notes.count > 0 {
+            let book = realm.objects(Book.self).filter("id = %d", UserDefaults.standard.value(forKey: "selectedBook") ?? 1)
+            dataArr = book.first?.notes.sorted(byKeyPath: "interval" ,ascending:false)
+            
+            var earning = 0.0
+            var expense = 0.0
+            for model in dataArr!{
+                if model.isEarning{
+                    earning += Double(model.money)!
+                }else{
+                    expense += Double(model.money)!
+                }
+            }
+            earningLabel.text = String(format: "%.2f", earning)
+            expenseLabel.text = String(format: "%.2f", expense)
+
+            tableview.reloadData()
+        }
+        print(realm.configuration.fileURL!)
+
+    }
 
     
     func setupUI() {
@@ -95,9 +120,14 @@ extension NotesViewController:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NoteTableViewCell
-        
-        cell.left.text = "left"
-        cell.right.text = "right"
+        let model = dataArr![indexPath.row]
+        if model.isEarning{
+            cell.left.text = "\(model.money) \(model.type)"
+            cell.right.text = ""
+        }else{
+            cell.right.text = "\(model.type) \(model.money)"
+            cell.left.text = ""
+        }
 
         return cell;
     }
