@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xi3-5x-wOa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zg1-qh-Auz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--记账-->
+        <!--Notes View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NotesViewController" customModule="AddNote" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,7 +193,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="记账" image="sign_un" selectedImage="sign" id="iwz-Za-UIu"/>
                     <navigationItem key="navigationItem" id="gPW-VP-QRZ"/>
                     <connections>
                         <outlet property="addBtn" destination="xIH-xh-nj8" id="PcU-JB-EXR"/>
@@ -204,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3028" y="-260.41979010494754"/>
+            <point key="canvasLocation" x="3967.1999999999998" y="-260.41979010494754"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="GYo-FJ-dcA">
@@ -339,7 +338,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRH-M8-b00">
-                                <rect key="frame" x="192.5" y="598" width="162.5" height="44"/>
+                                <rect key="frame" x="192.5" y="549" width="162.5" height="44"/>
                                 <color key="backgroundColor" red="0.086274509799999996" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Vb2-4A-qX7"/>
@@ -351,7 +350,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xac-T2-V7b">
-                                <rect key="frame" x="20" y="598" width="162.5" height="44"/>
+                                <rect key="frame" x="20" y="549" width="162.5" height="44"/>
                                 <color key="backgroundColor" red="0.086274509803921567" green="0.58823529411764708" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Iqb-DX-qP4"/>
@@ -410,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3Y-LQ-PAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3940" y="-429"/>
+            <point key="canvasLocation" x="4873" y="-421"/>
         </scene>
         <!--账本-->
         <scene sceneID="VMx-jB-YC6">
@@ -421,7 +420,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e44-zk-SZp">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oh3-4a-k5r">
                                     <size key="itemSize" width="124" height="150"/>
@@ -438,7 +437,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日常账本" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkY-qp-cdT">
-                                                    <rect key="frame" x="20" y="25" width="84" height="30"/>
+                                                    <rect key="frame" x="15" y="25" width="94" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Lcf-ee-ru1"/>
                                                     </constraints>
@@ -446,15 +445,31 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3笔" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg6-dN-bda">
+                                                    <rect key="frame" x="72" y="124" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="4WO-Bv-uXW"/>
+                                                        <constraint firstAttribute="width" constant="42" id="4fd-OK-ek3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="qkY-qp-cdT" firstAttribute="leading" secondItem="WyR-e7-8yD" secondAttribute="leading" constant="20" id="CdZ-Nn-JT1"/>
-                                            <constraint firstAttribute="trailing" secondItem="qkY-qp-cdT" secondAttribute="trailing" constant="20" id="GLZ-61-kfn"/>
+                                            <constraint firstAttribute="trailing" secondItem="kg6-dN-bda" secondAttribute="trailing" constant="10" id="B3h-7i-c2g"/>
+                                            <constraint firstItem="qkY-qp-cdT" firstAttribute="leading" secondItem="WyR-e7-8yD" secondAttribute="leading" constant="15" id="CdZ-Nn-JT1"/>
+                                            <constraint firstAttribute="trailing" secondItem="qkY-qp-cdT" secondAttribute="trailing" constant="15" id="GLZ-61-kfn"/>
                                             <constraint firstItem="qkY-qp-cdT" firstAttribute="top" secondItem="WyR-e7-8yD" secondAttribute="top" constant="25" id="bX8-Cf-jpy"/>
                                             <constraint firstItem="qkY-qp-cdT" firstAttribute="centerX" secondItem="WyR-e7-8yD" secondAttribute="centerX" id="bXD-zg-SZG"/>
+                                            <constraint firstAttribute="bottom" secondItem="kg6-dN-bda" secondAttribute="bottom" constant="5" id="d4C-w6-gec"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="noteCount" destination="kg6-dN-bda" id="dvU-wk-MkL"/>
+                                            <outlet property="title" destination="qkY-qp-cdT" id="nkE-f4-FC4"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -468,18 +483,70 @@
                             <constraint firstItem="tdf-Gm-noI" firstAttribute="trailing" secondItem="e44-zk-SZp" secondAttribute="trailing" id="4ro-wU-hed"/>
                             <constraint firstItem="tdf-Gm-noI" firstAttribute="bottom" secondItem="e44-zk-SZp" secondAttribute="bottom" id="OTY-oi-K0V"/>
                             <constraint firstItem="e44-zk-SZp" firstAttribute="leading" secondItem="tdf-Gm-noI" secondAttribute="leading" id="ggF-1O-cEd"/>
-                            <constraint firstItem="e44-zk-SZp" firstAttribute="top" secondItem="tdf-Gm-noI" secondAttribute="top" id="ifm-gv-f9i"/>
+                            <constraint firstItem="e44-zk-SZp" firstAttribute="top" secondItem="tdf-Gm-noI" secondAttribute="top" constant="20" id="ifm-gv-f9i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tdf-Gm-noI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="账本" image="find_un" selectedImage="find" id="FXH-yo-3ky"/>
+                    <navigationItem key="navigationItem" title="账本" id="oQj-m7-IKF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Oj-Tx-JaG">
+                            <connections>
+                                <segue destination="30d-Cl-Gq1" kind="show" id="map-9b-ctp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="e44-zk-SZp" id="Rse-Rp-rW6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4s9-ii-i7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3096.8000000000002" y="398.95052473763121"/>
+            <point key="canvasLocation" x="4036" y="398.95052473763121"/>
+        </scene>
+        <!--Creat Book View Controller-->
+        <scene sceneID="vLE-t1-Az5">
+            <objects>
+                <viewController id="30d-Cl-Gq1" customClass="CreatBookViewController" customModule="AddNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mce-1I-hze">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账本名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fdh-VE-feN">
+                                <rect key="frame" x="60" y="214" width="255" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idW-uu-0EP">
+                                <rect key="frame" x="112.5" y="304" width="150" height="44"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.58823529409999997" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Bir-FA-2kG"/>
+                                    <constraint firstAttribute="width" constant="150" id="oET-2X-fim"/>
+                                </constraints>
+                                <state key="normal" title="新建账本"/>
+                                <connections>
+                                    <action selector="creatBook:" destination="30d-Cl-Gq1" eventType="touchUpInside" id="YWg-e4-hae"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fdh-VE-feN" firstAttribute="leading" secondItem="Un2-cU-Wlb" secondAttribute="leading" constant="60" id="KJH-RG-CP8"/>
+                            <constraint firstItem="idW-uu-0EP" firstAttribute="centerX" secondItem="mce-1I-hze" secondAttribute="centerX" id="Pst-Yw-ViK"/>
+                            <constraint firstItem="Fdh-VE-feN" firstAttribute="centerX" secondItem="mce-1I-hze" secondAttribute="centerX" id="W2B-Oa-qLV"/>
+                            <constraint firstItem="Fdh-VE-feN" firstAttribute="top" secondItem="Un2-cU-Wlb" secondAttribute="top" constant="150" id="Yp9-xX-rmH"/>
+                            <constraint firstItem="idW-uu-0EP" firstAttribute="top" secondItem="Fdh-VE-feN" secondAttribute="bottom" constant="60" id="mtZ-09-4L0"/>
+                            <constraint firstItem="Un2-cU-Wlb" firstAttribute="trailing" secondItem="Fdh-VE-feN" secondAttribute="trailing" constant="60" id="zri-z9-KXW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Un2-cU-Wlb"/>
+                    </view>
+                    <connections>
+                        <outlet property="bookName" destination="Fdh-VE-feN" id="aiY-cE-yTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KyC-te-8FV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4989.6000000000004" y="394.45277361319341"/>
         </scene>
         <!--我的-->
         <scene sceneID="MsE-pI-9dF">
@@ -503,30 +570,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JGd-zC-9iR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的" image="min_un" selectedImage="min" id="2Zi-N4-M0c"/>
+                    <navigationItem key="navigationItem" title="我的" id="YbY-3H-cH0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CEX-F6-b74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3097" y="1141"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="LzB-rP-Hak">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xi3-5x-wOa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6Su-P8-6mt"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WC2-Ks-QOh">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="zg1-qh-Auz" kind="relationship" relationship="rootViewController" id="yLk-7d-qJE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iMO-5Q-8iF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1055.2" y="102.99850074962519"/>
+            <point key="canvasLocation" x="4036" y="1140.1799100449775"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="m6X-4M-Vfo">
@@ -540,14 +588,71 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="296-JX-NDF"/>
-                        <segue destination="rZY-g8-fqn" kind="relationship" relationship="viewControllers" id="isa-if-7cH"/>
-                        <segue destination="Swv-oz-cwb" kind="relationship" relationship="viewControllers" id="Xsk-jy-2fP"/>
+                        <segue destination="zPs-Ym-fO8" kind="relationship" relationship="viewControllers" id="296-JX-NDF"/>
+                        <segue destination="jpb-FV-vW8" kind="relationship" relationship="viewControllers" id="isa-if-7cH"/>
+                        <segue destination="yeA-2Z-bqo" kind="relationship" relationship="viewControllers" id="Xsk-jy-2fP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oeu-vP-Ve0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1994.4000000000001" y="102.99850074962519"/>
+        </scene>
+        <!--记账-->
+        <scene sceneID="ACf-ZF-uHi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zPs-Ym-fO8" customClass="BaseNavigationViewController" customModule="AddNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="记账" image="sign_un" selectedImage="sign" id="iwz-Za-UIu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MDj-zA-uUv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U3Y-MK-a9m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TC-88-8de" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3028" y="-260.41979010494754"/>
+        </scene>
+        <!--账本-->
+        <scene sceneID="sTX-ii-Asm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jpb-FV-vW8" customClass="BaseNavigationViewController" customModule="AddNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="账本" image="find_un" selectedImage="find" id="FXH-yo-3ky"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Iv-03-bdM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rZY-g8-fqn" kind="relationship" relationship="rootViewController" id="zZ0-I1-C5m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcc-fe-EmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3096.8000000000002" y="398.95052473763121"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="bIR-5c-Au1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yeA-2Z-bqo" customClass="BaseNavigationViewController" customModule="AddNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="min_un" selectedImage="min" id="2Zi-N4-M0c"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8ch-Da-Yoe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Swv-oz-cwb" kind="relationship" relationship="rootViewController" id="vCj-sv-cVZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDX-2M-geU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3096.8000000000002" y="1140.1799100449775"/>
         </scene>
     </scenes>
     <resources>

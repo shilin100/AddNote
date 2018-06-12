@@ -9,5 +9,10 @@
 import UIKit
 
 class BookCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var title: UILabel!
+    
+    @IBOutlet weak var noteCount: UILabel!
+    
+    open var bookId = 1
     
 }

@@ -20,7 +20,7 @@ class NotesViewController: UIViewController,StoryboardView {
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var tableview: UITableView!
     
-    var dataArr : Results<NoteModel>?
+    var dataArr : Array<NoteModel>?
 
     var disposeBag = DisposeBag()
     typealias Reactor = NotesViewReactor
@@ -55,13 +55,20 @@ class NotesViewController: UIViewController,StoryboardView {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+
+        
+        
         let realm = try! Realm()
 
         let notes = realm.objects(NoteModel.self)
         if notes.count > 0 {
-            let book = realm.objects(Book.self).filter("id = %d", UserDefaults.standard.value(forKey: "selectedBook") ?? 1)
-            dataArr = book.first?.notes.sorted(byKeyPath: "interval" ,ascending:false)
-            
+            let temp = realm.objects(NoteModel.self).sorted(byKeyPath: "interval", ascending: false)
+            dataArr = temp.filter({ (model) -> Bool in
+                model.owner?.id == UserDefaults.standard.integer(forKey: "selectedBook")
+            })
             var earning = 0.0
             var expense = 0.0
             for model in dataArr!{
@@ -83,25 +90,18 @@ class NotesViewController: UIViewController,StoryboardView {
     
     func setupUI() {
 
-        
-        self.navigationController?.navigationBar.titleTextAttributes = [kCTForegroundColorAttributeName:UIColor.white] as [NSAttributedStringKey : Any]
-
-        // 2.设置导航栏前景色：设置item指示色
-        self.navigationController?.navigationBar.tintColor = UIColor.purple
-        // 3.设置导航栏半透明
-        self.navigationController?.navigationBar.isTranslucent = true
-        // 4.设置导航栏背景图片
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        
-        // 5.设置导航栏阴影图片
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        
         addBtn.layer.cornerRadius = 60;
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //重置导航栏背景
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
+        self.navigationController?.navigationBar.shadowImage = nil
+
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
