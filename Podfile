@@ -49,6 +49,8 @@ pod 'URLNavigator'
 pod 'SwiftyColor'
 pod 'SwiftyImage'
 pod 'RealmSwift'
+pod 'SwiftyJSON'
+pod 'SDCycleScrollView'
 
 
   target 'AddNoteTests' do

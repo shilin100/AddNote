@@ -22,6 +22,12 @@
 		9D1B884E20B7FA0600115E9F /* AddNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B884D20B7FA0600115E9F /* AddNoteUITests.swift */; };
 		9D32240C20CFAE9E001ADF13 /* CreatBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D32240B20CFAE9E001ADF13 /* CreatBookViewController.swift */; };
 		9D32240E20CFCE68001ADF13 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D32240D20CFCE68001ADF13 /* BaseNavigationViewController.swift */; };
+		9D32241320D10433001ADF13 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D32241220D10433001ADF13 /* AboutUsViewController.swift */; };
+		9D32241520D1045C001ADF13 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D32241420D1045C001ADF13 /* SuggestViewController.swift */; };
+		9D7AF2CB20D26CD800F263FD /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7AF2CA20D26CD800F263FD /* NewsTableViewCell.swift */; };
+		9D7AF2CD20D26CF800F263FD /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7AF2CC20D26CF800F263FD /* DiscoverViewController.swift */; };
+		9D7AF2CF20D26FD700F263FD /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7AF2CE20D26FD700F263FD /* NewsRequest.swift */; };
+		9D7AF2D120D2772A00F263FD /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7AF2D020D2772900F263FD /* WebViewViewController.swift */; };
 		9D7FCD9B20BBE9CB00F45F79 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCD9A20BBE9CB00F45F79 /* NotesViewController.swift */; };
 		9D7FCDA020BBEEFC00F45F79 /* NotesViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCD9F20BBEEFC00F45F79 /* NotesViewReactor.swift */; };
 		9D7FCDA420BC04E800F45F79 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7FCDA320BC04E800F45F79 /* BooksViewController.swift */; };
@@ -75,6 +81,12 @@
 		9D1B884F20B7FA0600115E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D32240B20CFAE9E001ADF13 /* CreatBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatBookViewController.swift; sourceTree = "<group>"; };
 		9D32240D20CFCE68001ADF13 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		9D32241220D10433001ADF13 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		9D32241420D1045C001ADF13 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
+		9D7AF2CA20D26CD800F263FD /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		9D7AF2CC20D26CF800F263FD /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		9D7AF2CE20D26FD700F263FD /* NewsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
+		9D7AF2D020D2772900F263FD /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		9D7FCD9A20BBE9CB00F45F79 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		9D7FCD9F20BBEEFC00F45F79 /* NotesViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewReactor.swift; sourceTree = "<group>"; };
 		9D7FCDA320BC04E800F45F79 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +176,7 @@
 			children = (
 				9D1B882D20B7FA0400115E9F /* AppDelegate.swift */,
 				9D32240D20CFCE68001ADF13 /* BaseNavigationViewController.swift */,
+				9D7AF2CE20D26FD700F263FD /* NewsRequest.swift */,
 				9D7FCD9920BBE9A800F45F79 /* Sections */,
 				9D1B883120B7FA0400115E9F /* Main.storyboard */,
 				9D1B883420B7FA0600115E9F /* Assets.xcassets */,
@@ -191,17 +204,45 @@
 			path = AddNoteUITests;
 			sourceTree = "<group>";
 		};
-		9D7FCD9920BBE9A800F45F79 /* Sections */ = {
+		9D32240F20D0F50F001ADF13 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				9D7FCDA320BC04E800F45F79 /* BooksViewController.swift */,
+				9D7FCDA720BC050A00F45F79 /* BooksViewReactor.swift */,
+				9D32240B20CFAE9E001ADF13 /* CreatBookViewController.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		9D32241020D0F52B001ADF13 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
 				9D7FCD9A20BBE9CB00F45F79 /* NotesViewController.swift */,
 				9D7FCD9F20BBEEFC00F45F79 /* NotesViewReactor.swift */,
-				9D7FCDA320BC04E800F45F79 /* BooksViewController.swift */,
-				9D7FCDA720BC050A00F45F79 /* BooksViewReactor.swift */,
+				9D164D3420BE848C006A3C91 /* AddViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		9D32241120D0F53F001ADF13 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
 				9D7FCDA520BC04F300F45F79 /* MineViewController.swift */,
 				9D7FCDA920BC051700F45F79 /* MineViewReactor.swift */,
-				9D164D3420BE848C006A3C91 /* AddViewController.swift */,
-				9D32240B20CFAE9E001ADF13 /* CreatBookViewController.swift */,
+				9D32241220D10433001ADF13 /* AboutUsViewController.swift */,
+				9D32241420D1045C001ADF13 /* SuggestViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		9D7FCD9920BBE9A800F45F79 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				9D7AF2D020D2772900F263FD /* WebViewViewController.swift */,
+				9D7AF2CC20D26CF800F263FD /* DiscoverViewController.swift */,
+				9D32241120D0F53F001ADF13 /* Mine */,
+				9D32241020D0F52B001ADF13 /* Notes */,
+				9D32240F20D0F50F001ADF13 /* Books */,
 				9D164D3720BE8F94006A3C91 /* Model */,
 				9D7FCDAE20BD54A400F45F79 /* View */,
 			);
@@ -211,6 +252,7 @@
 		9D7FCDAE20BD54A400F45F79 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D7AF2CA20D26CD800F263FD /* NewsTableViewCell.swift */,
 				9D7FCDAF20BD54BD00F45F79 /* NoteTableViewCell.swift */,
 				9D1613F220BFF4EF00CC58B5 /* BookCollectionViewCell.swift */,
 				9D7FCDB120BD6C5600F45F79 /* UIKitExtensions.swift */,
@@ -425,11 +467,14 @@
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyColor/SwiftyColor.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyImage/SwiftyImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
@@ -463,11 +508,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
@@ -508,14 +556,20 @@
 			files = (
 				9D1613F120BFDD9300CC58B5 /* Book.swift in Sources */,
 				9D1613F320BFF4EF00CC58B5 /* BookCollectionViewCell.swift in Sources */,
+				9D7AF2CF20D26FD700F263FD /* NewsRequest.swift in Sources */,
 				9D164D3520BE848D006A3C91 /* AddViewController.swift in Sources */,
 				9D32240E20CFCE68001ADF13 /* BaseNavigationViewController.swift in Sources */,
 				9D7FCDA420BC04E800F45F79 /* BooksViewController.swift in Sources */,
 				9D1B882E20B7FA0400115E9F /* AppDelegate.swift in Sources */,
+				9D7AF2D120D2772A00F263FD /* WebViewViewController.swift in Sources */,
 				9D7FCDB220BD6C5600F45F79 /* UIKitExtensions.swift in Sources */,
 				9D7FCDA020BBEEFC00F45F79 /* NotesViewReactor.swift in Sources */,
+				9D7AF2CD20D26CF800F263FD /* DiscoverViewController.swift in Sources */,
+				9D7AF2CB20D26CD800F263FD /* NewsTableViewCell.swift in Sources */,
+				9D32241320D10433001ADF13 /* AboutUsViewController.swift in Sources */,
 				9D7FCDB020BD54BD00F45F79 /* NoteTableViewCell.swift in Sources */,
 				9D7FCDAA20BC051700F45F79 /* MineViewReactor.swift in Sources */,
+				9D32241520D1045C001ADF13 /* SuggestViewController.swift in Sources */,
 				9D164D3920BE8FC8006A3C91 /* NoteModel.swift in Sources */,
 				9D7FCD9B20BBE9CB00F45F79 /* NotesViewController.swift in Sources */,
 				9D32240C20CFAE9E001ADF13 /* CreatBookViewController.swift in Sources */,
@@ -697,11 +751,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QP487TEY6T;
 				INFOPLIST_FILE = AddNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SL.AddNote.aa;
+				PODS_PODFILE_DIR_PATH = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = SL.AddNote.aa22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -716,11 +772,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QP487TEY6T;
 				INFOPLIST_FILE = AddNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SL.AddNote.aa;
+				PODS_PODFILE_DIR_PATH = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = SL.AddNote.aa22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

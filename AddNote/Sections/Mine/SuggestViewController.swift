@@ -1,30 +1,27 @@
 //
-//  MineViewController.swift
+//  SuggestViewController.swift
 //  AddNote
 //
-//  Created by 123 on 2018/5/28.
+//  Created by 123 on 2018/6/13.
 //  Copyright © 2018年 shilin. All rights reserved.
 //
 
 import UIKit
-import ReactorKit
-import RxCocoa
-import RxSwift
+import SVProgressHUD
 
-class MineViewController: UIViewController,StoryboardView{
-    var disposeBag = DisposeBag()
-    typealias Reactor = MineViewReactor
+class SuggestViewController: UIViewController {
 
-    func bind(reactor: Reactor) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "问题反馈"
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func submit(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        SVProgressHUD.showSuccess(withStatus: "提交成功，感谢您的反馈")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

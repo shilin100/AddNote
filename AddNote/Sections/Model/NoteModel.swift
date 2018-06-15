@@ -17,6 +17,7 @@ class NoteModel: Object {
     @objc dynamic var msg = ""
     @objc dynamic var isEarning = false
     @objc dynamic var interval = 0.0
+    @objc dynamic var noteId = 0
     @objc dynamic var owner: Book?  // 对一关系
 
 //    override class func indexedProperties() -> [String] {

@@ -9,6 +9,8 @@
 import UIKit
 import SwiftyBeaver
 import RealmSwift
+import IQKeyboardManagerSwift
+
 
 let log = SwiftyBeaver.self
 
@@ -20,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+
+        
         /* Realm 数据库配置，用于数据库的迭代更新 */
         let schemaVersion: UInt64 = 0
         let config = Realm.Configuration(schemaVersion: schemaVersion, migrationBlock: { migration, oldSchemaVersion in

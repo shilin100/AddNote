@@ -51,6 +51,7 @@ class NotesViewController: UIViewController,StoryboardView {
             UserDefaults.standard.set(1, forKey: "selectedBook")
         }
 
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -58,11 +59,20 @@ class NotesViewController: UIViewController,StoryboardView {
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.tintColor = .white
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white] // 设置导航条标题颜色，还可以设置其它文字属性，只需要在里面添加对应的属性
 
         
         
         let realm = try! Realm()
 
+        let books = realm.objects(Book.self)
+        let book = books.filter { (make) -> Bool in
+            make.id == UserDefaults.standard.integer(forKey: "selectedBook")
+        }
+        self.title = book.first?.title
+        
         let notes = realm.objects(NoteModel.self)
         if notes.count > 0 {
             let temp = realm.objects(NoteModel.self).sorted(byKeyPath: "interval", ascending: false)
@@ -99,6 +109,9 @@ class NotesViewController: UIViewController,StoryboardView {
         //重置导航栏背景
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         self.navigationController?.navigationBar.shadowImage = nil
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.08235294118, green: 0.4509803922, blue: 0.8901960784, alpha: 1)
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black] // 设置导航条标题颜色，还可以设置其它文字属性，只需要在里面添加对应的属性
 
     }
     
@@ -132,4 +145,30 @@ extension NotesViewController:UITableViewDataSource,UITableViewDelegate{
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let model = dataArr![indexPath.row]
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.delete(model)
+        }
+        
+        dataArr?.remove(at: indexPath.row)
+        tableView.setEditing(false, animated: true)
+        tableView.reloadData()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "确认删除"
+    }
 }

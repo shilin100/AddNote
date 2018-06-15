@@ -43,12 +43,18 @@ class AddViewController: UIViewController {
         (typeTF.text != nil) ? note.type = typeTF.text! : SVProgressHUD.showError(withStatus: "请输入类型")
         (moneyTF.text != nil) ? note.money = moneyTF.text! : SVProgressHUD.showError(withStatus: "请输入金额")
         note.date = dateBtn.titleLabel!.text!
-        note.interval = Double(AddViewController.stringToTimeStamp(stringTime: dateBtn.titleLabel!.text!))!
+        let sec = Int(NSDate().timeIntervalSince1970)%60
+        
+        note.interval = Double(AddViewController.stringToTimeStamp(stringTime: dateBtn.titleLabel!.text!))! + Double(sec)
         note.msg = msgTV.text ?? "无"
         note.isEarning = segment.selectedSegmentIndex == 1
         let realm = try! Realm()
         let book = realm.objects(Book.self).filter("id = %d", UserDefaults.standard.value(forKey: "selectedBook")!)
         note.owner = book.first
+        
+        let notes = realm.objects(NoteModel.self)
+        note.noteId = notes.count+1
+        
         try! realm.write {
             realm.add(note)
             book.first?.notes.append(note)
